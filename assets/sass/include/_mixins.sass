@@ -1,0 +1,44 @@
+// Breakpoints
+=mob-landscape
+    @media (max-width: $breakpoint-medium - 1) and (orientation: landscape)
+        @content
+
+=xsmall-min
+    @media (min-width: 360px)
+        @content
+
+=xsmall
+    @media (min-width: $breakpoint-xsmall)
+        @content
+
+=small
+    @media (min-width: $breakpoint-small)
+        @content
+
+=medium
+    @media (min-device-width: 1025px) and (orientation: landscape), (min-device-width: 769px) and (orientation: portrait)
+        @content
+
+=medium-landscape
+    @media (min-width: $breakpoint-medium) and (orientation: landscape)
+        @content
+
+=large
+    @media (min-width: $breakpoint-large)
+        @content
+
+=large-vert
+    @media (min-width: $breakpoint-large) and (orientation: portrait)
+        @content
+
+=mlarge
+    @media (min-width: $breakpoint-mlarge)
+        @content
+
+=xlarge
+    @media (min-width: $breakpoint-xlarge)
+        @content
+
+=xlarge-max
+    @media (min-width: $breakpoint-xlarge-max)
+        @content

@@ -1,0 +1,225 @@
+body, html
+    height: 100%
+    margin: 0
+    position: relative
+    box-sizing: border-box
+
+body
+    min-width: 320px
+
+    &.intro-locked
+        overflow: hidden
+        height: 100vh
+        height: calc(var(--vh, 1vh) * 100)
+
+        header
+            display: block
+            position: relative
+            overflow: hidden
+            height: 0
+            padding: 0
+            margin: 0
+
+        .intro-wrapper
+            height: calc(100vh - 40px)
+            height: calc(var(--vh, 1vh) * 100 - 40px)
+
+.intro-wrapper
+    display: block
+    position: relative
+    overflow: hidden
+    height: calc(100vh - 110px)
+    height: calc(var(--vh, 1vh) * 100 - 110px)
+    width: 100%
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.25
+    background-color: $main-bg
+    box-sizing: border-box
+    z-index: 5
+
+    +medium
+        height: calc(100vh - 125px)
+        height: calc(var(--vh, 1vh) * 100 - 125px)
+
+    .video-wrapper
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+        opacity: 1
+        transition: 0s
+        visibility: visible
+
+        &.video-placeholder
+            opacity: 0
+            visibility: hidden
+
+    .video-placeholder
+        z-index: 1
+
+    .video-scenes
+        z-index: 3
+
+    .bg-video
+        display: none
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+
+    .video-landscape
+        display: block
+
+    @media (orientation: landscape)
+        .video-portrait
+            display: none
+
+        .video-landscape
+            display: block
+
+    @media (orientation: portrait)
+        .video-portrait
+            display: block
+
+        .video-landscape
+            display: none
+
+    &.video-centered
+        .video-scene
+            width: auto
+            height: auto
+            top: 100%
+            left: 50%
+            transform: translate(-50%, -100%)
+
+        .video-scene-placeholder
+            width: auto
+            height: auto
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+    .bg-audio
+        display: block
+        position: absolute
+        z-index: -1
+        width: 0
+        height: 0
+        opacity: 0
+
+
+    .intro-nav-panel
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        position: absolute
+        top: 50%
+        right: 24px
+        transform: translateY(-50%)
+        z-index: 20
+
+        li
+            display: flex
+            align-items: center
+
+        @media (max-width: 460px), (max-height: 280px)
+            display: none
+
+    .intro-nav-item
+        display: flex
+        align-items: center
+        cursor: pointer
+        padding: 0
+        margin: 0 0 16px
+
+        &:last-child
+            margin-bottom: 0
+
+        span
+            font-family: $TTReg
+            font-size: 12px
+            line-height: 20px
+            color: $white
+            letter-spacing: 0.12em
+            text-transform: uppercase
+            -webkit-font-smoothing: antialiased
+            transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+            opacity: 0
+            margin: 0
+            padding: 0
+            transform: translateX(12px)
+
+
+        &.intro-dot-hovered
+            span
+                opacity: 1
+                transform: translateX(0)
+
+            .intro-nav-dot
+                transform: scale(3)
+                background-color: $white
+
+        &.intro-dot-active
+            .intro-nav-dot
+                transform: scale(3)
+                background-color: $white
+
+    .intro-dot-wrap
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 12px
+        height: 12px
+        padding: 0
+        margin: 0 0 0 9px
+
+    .intro-nav-dot
+        display: block
+        padding: 0
+        margin: 0
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: $white
+        transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    button
+        outline: none
+        border: none
+
+    h1, h2, h3, h4, p
+        padding: 0
+        margin: 0
+
+    h1
+        font-weight: 500
+
+    ul
+        list-style: none
+        padding: 0
+        margin: 0
+
+    a
+        text-decoration: none
+
+    input
+        outline: none
+        box-shadow: none
+        border: none
+
+header
+    height: 70px
+    background-color: #ffffff
+    transition: height 0.5s
+
+    +medium
+        height: 85px
+
+.ty-secondary-nav
+    height: 40px
+    background-color: #000000

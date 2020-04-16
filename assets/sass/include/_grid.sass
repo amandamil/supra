@@ -1,0 +1,93 @@
+.intro-row
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	margin: 0 auto
+	width: 100%
+	padding: 0 16px
+	box-sizing: border-box
+	position: relative
+	z-index: 3
+
+	[class^="intro-col-"]
+		display: block
+		position: relative
+		padding: 0 8px
+		box-sizing: border-box
+		width: 100%
+
+	+xsmall
+		//width: 342px
+
+	+small
+		//width: 456px
+
+	@media (min-width: #{$breakpoint-medium + 1px})
+		//width: 720px
+		padding: 0 (32px - 8px)
+
+		.intro-col-1
+			width: 16.66%
+
+		.intro-col-2, .intro-col-3
+			width: 33.33%
+
+		.intro-col-4, .intro-col-5, .intro-col-6, .intro-col-7, .intro-col-8
+			width: 50%
+
+		.intro-col-9, .intro-col-10
+			width: 66.66%
+
+		.intro-col-11
+			width: 83.333%
+
+		.intro-col-12
+			width: 100%
+
+	@media (min-width: #{$breakpoint-large + 1px})
+		//width: 960px
+		padding: 0 (40px - 8px)
+
+		.intro-col-1
+			width: 8.33%
+
+		.intro-col-2
+			width: 16.66%
+
+		.intro-col-3
+			width: 25%
+
+		.intro-col-4
+			width: 33.33%
+
+		.intro-col-5
+			width: 41.66%
+
+		.intro-col-6
+			width: 50%
+
+		.intro-col-7
+			width: 58.33%
+
+		.intro-col-8
+			width: 66.66%
+
+		.intro-col-9
+			width: 75%
+
+		.intro-col-10
+			width: 83.33%
+
+		.intro-col-11
+			width: 91.66%
+
+	+mlarge
+		//width: 1152px
+		padding: 0 (76px - 12px)
+
+		[class^="intro-col-"]
+			padding: 0 12px
+
+	+xlarge
+		padding: 0
+		width: 1428px

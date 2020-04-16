@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Supra</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+	<div class="intro-wrapper intro-hidden" id="intro-wrapper">
+
+        <div class="video-wrapper video-scenes">
+
+            <video muted playsinline id="mobile-video" preload="metadata" class="bg-video video-portrait video-scene">
+                <source src="https://tmca-media.rotorint.com/supra-immersive/video/bg-video-mobile.mp4" type="video/mp4">
+            </video>
+
+            <video muted playsinline id="desktop-video" preload="metadata" class="bg-video video-landscape video-scene">
+                <source src="https://tmca-media.rotorint.com/supra-immersive/video/bg-video.mp4" type="video/mp4">
+            </video>
+
+            <audio id="bg-audio" class="bg-audio">
+                <source src="https://tmca-media.rotorint.com/supra-immersive/video/bg-audio.mp3" type="audio/mpeg">
+            </audio>
+            
+        </div>
+
+        <div class="video-wrapper video-placeholder">
+
+            <video muted playsinline id="mobile-placeholder-video" preload="metadata" class="bg-video video-portrait video-scene-placeholder">
+                <source src="https://tmca-media.rotorint.com/supra-immersive/video/intro-video-mobile.mp4" type="video/mp4">
+            </video>
+
+            <video muted playsinline id="desktop-placeholder-video" preload="metadata" class="bg-video video-landscape video-scene-placeholder">
+                <source src="https://tmca-media.rotorint.com/supra-immersive/video/intro-video.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="scenes-placeholder placeholder-hidden" id="scenes-placeholder">
+
+            <div class="placeholder-buttons">
+                <a href="https://supra.dealer.toyota.com.au/how-to-buy" class="intro-button" id="intro-reserve">Reserve Now</a>
+                <a href="#" class="intro-button button-highlighted" id="intro-start">Experience</a>
+            </div>
+
+        </div>
+
+        <div class="scenes-wrapper scenes-hidden" id="scenes-wrapper">
+
+            <ul class="intro-nav-panel horiz-flex-el">
+                <li class="intro-nav-item" id="start-scene">
+                    <span>All-New GR Supra</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="design-scene">
+                    <span>Design</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="design-second-scene">
+                    <span>Design</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="performance-scene">
+                    <span>Performance</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="engine-scene">
+                    <span>Engine</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="wheels-scene">
+                    <span>Wheels & Brakes</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="interior-scene">
+                    <span>Interior</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="screen-scene">
+                    <span>touchscreen</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+                <li class="intro-nav-item" id="racing-scene">
+                    <span>GAZOO Racing</span>
+                    <div class="intro-dot-wrap">
+                        <div class="intro-nav-dot"></div>
+                    </div>
+                </li>
+            </ul>
+
+            <div id="start-overlay"></div>
+
+            <div class="scene-wrapper template-b" id="start-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-5">
+                        <div class="intro-heading">Always in motion</div>
+                        <div class="intro-text">We’ve collaborated with some of the brightest engineering minds in the world to bring you a spectacular sports car that’s agile, powerful and totally faithful to its legendary bloodline. <br/> (GTS grade shown)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="design-scene-text">
+               <div class="intro-row">
+                   <div class="intro-col-7">
+                       <span class="intro-label">Design</span>
+                       <div class="intro-heading">The future’s looking good</div>
+                       <div class="intro-text">When crafting the All-New Toyota GR Supra, the intention was to build a sports car that’s low, strong and perfectly balanced. The end result is a car that calls for you to get behind the wheel, and drive for days.</div>
+                   </div>
+               </div>
+            </div>
+
+            <div class="scene-wrapper template-d" id="design-scene-text-shoot2">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="wrapper-d">
+                            <div class="main-block anim-item">
+                                <div class="text-flex-wrap">
+                                    <span>50</span>
+                                    <div class="divider"></div>
+                                    <span>50</span>
+                                </div>
+                                <p>weight distribution</p>
+                            </div>
+                            <div class="aditional-block">
+                                <div class="anim-item aditional-item">
+                                    <div class="hozir-divider"></div>
+                                    <div class="value-wrap">
+                                        <p>1,495</p>
+                                        <span>kg</span>
+                                    </div>
+                                    <p>lightweight body</p>
+                                </div>
+                                <div class="anim-item aditional-item">
+                                    <div class="hozir-divider"></div>
+                                    <div class="value-wrap">
+                                        <p>2.47</p>
+                                        <span>m</span>
+                                    </div>
+                                    <p>short wheelbase</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="design-scene-text-shoot3">
+                <div class="intro-row">
+                    <div class="intro-col-6">
+                        <span class="intro-label">Design</span>
+                        <div class="intro-heading">Beauty is in its DNA</div>
+                        <div class="intro-text">It’s impossible to ignore the car&#39;s muscular haunches, bubble-domed roof and ducktail boot-lid spoiler. The whole design epitomises function and form working in total harmony.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="design-scene-text-shoot3-1">
+                <div class="intro-row">
+                    <div class="intro-col-7"></div>
+                    <div class="intro-col-5">
+                        <div class="intro-heading">An aerodynamically refined exterior</div>
+                        <div class="intro-text">Cuts through the air like a knife, the unique shape of the All-New Toyota GR Supra is designed to reduce drag and lift at high speeds.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-c" id="design-scene-text-shoot3-2">
+                <div class="intro-row">
+                    <div class="intro-col-7"></div>
+                    <div class="intro-col-5">
+                        <div class="intro-heading">Adaptive six-lens headlights</div>
+                        <div class="intro-text">To enhance the Supra&prime;s signature silhouette. The Adaptive Front-Lighting System moves with steering wheel inputs to light up the winding road ahead.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="design-scene-text-shoot3-3">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="intro-heading">An assertive tail-end design</div>
+                        <div class="intro-text">The duck-tail boot lid spoiler and flared wheel arches create a imposing road presence that exudes classic style.</div>
+                        <div class="sound-btn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="performance-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-6">
+                        <span class="intro-label">Performance</span>
+                        <div class="intro-heading">Undeniable Supra power</div>
+                        <div class="intro-text">With its front-engine, rear-wheel drive configuration, high-rigidity body and 8-speed automatic transmission, the All-New Toyota GR Supra delivers an exhilarating drive on the road and the racetrack.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-d" id="performance-scene-text-shoot4-1">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="wrapper-d">
+                            <div class="main-block anim-item">
+                                <div class="text-flex-wrap">
+                                    <span>4.4</span>
+                                    <div class="divider"></div>
+                                    <p>secs</p>
+                                </div>
+                                <p>0-100km/h</p>
+                            </div>
+                            <div class="aditional-block">
+                                <div class="anim-item aditional-item">
+                                    <div class="hozir-divider"></div>
+                                    <div class="value-wrap">
+                                        <p>250</p>
+                                        <span>km/h</span>
+                                    </div>
+                                    <p>Max speed</p>
+                                </div>
+                                <div class="anim-item aditional-item">
+                                    <div class="hozir-divider"></div>
+                                    <div class="value-wrap">
+                                        <p>250</p>
+                                        <span>kW</span>
+                                    </div>
+                                    <p>Max power</p>
+                                </div>
+                                <div class="anim-item aditional-item">
+                                    <div class="hozir-divider"></div>
+                                    <div class="value-wrap">
+                                        <p>500</p>
+                                        <span>Nm</span>
+                                    </div>
+                                    <p>Max torque</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="engine-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <span class="intro-label">Engine</span>
+                        <div class="intro-heading">Supra&prime;s heart and soul</div>
+                        <div class="intro-text">The 3.0L straight six-cylinder, twin-scroll turbo engine defines the Supra experience. It always has. But with an incredible 250kW of power and 500Nm of torque, this one heralds a new dawn of performance.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="wheels-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-5">
+                        <span class="intro-label">Wheels &amp; Brakes</span>
+                        <div class="intro-heading">Ultimate control and stopping power</div>
+                        <div class="intro-text">Lightweight wheels. High performance tyres. Four-pot sports brakes for ultimate stopping power. Sports car driving doesn’t get much better than this.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-c" id="wheels-scene-text-shoot5-1">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="intro-heading">High-modulation sports brakes</div>
+                        <div class="intro-text">Ventilated discs with painted, four piston calipers (GTS only) at the front for powerful, responsive braking that won't let you down.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-c" id="wheels-scene-text-shoot5-3">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="intro-heading">Exclusively designed tyres</div>
+                        <div class="intro-text">Road legal and race inspired for improved grip and control.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-c" id="wheels-scene-text-shoot5-4">
+                <div class="intro-row">
+                    <div class="intro-col-7"></div>
+                    <div class="intro-col-5">
+                        <div class="intro-heading">Forged aluminium wheels (GTS Grade)</div>
+                        <div class="intro-text">To enhance the GR Supra’s already iconic appeal, we introduced a unique design that increases rigidity and reduces unsprung weight.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="interior-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-5">
+                        <span class="intro-label">Interior</span>
+                        <div class="intro-heading">Designed for the road and the track</div>
+                        <div class="intro-text">Step inside the All-New Toyota GR Supra, and you’ll find easy-to-access controls, race inspired steering wheel and well-positioned knee pads for cornering support. Settle in to the low slung, leather-accented seats and you’ll never want to leave the cockpit.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="interior-scene-text-shoot6-1">
+                <div class="intro-row">
+                    <div class="intro-col-5">
+                        <div class="intro-heading">The digital instrument cluster</div>
+                        <div class="intro-text">Allows you to personalise sport displays, choose driver profiles and customise safety warnings.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scene-wrapper template-b" id="screen-scene-text">
+                <div class="intro-row">
+                    <div class="intro-col-4">
+                        <div class="intro-heading">A smart 8.8-inch touchscreen</div>
+                        <div class="intro-text">Plus a Head Up Display (GTS only) to put you in control of essential information while your eyes stay on the road ahead.</div>
+                    </div>
+                </div>
+            </div>
+
+	        <div class="scene-wrapper template-b" id="racing-scene-text">
+		        <div class="intro-row">
+			        <div class="intro-col-6">
+				        <span class="intro-label">Toyota GAZOO Racing</span>
+				        <div class="intro-heading">We race, we learn, you win</div>
+				        <div class="intro-text">The All-New Toyota GR Supra offers an exciting glimpse into Toyota’s high-performance, competition-ready future.</div>
+						<div class="intro-buttons">
+							<a href="https://supra.dealer.toyota.com.au/how-to-buy" class="intro-button button-featured">Reserve Now</a>
+							<a href="#" class="intro-button" id="intro-continue">Continue</a>
+						</div>
+			        </div>
+		        </div>
+	        </div>
+
+            <div class="intro-restart" id="intro-restart">
+                <span>Back to top</span>
+                <i class="intro-restart-icon"></i>
+            </div>
+
+        </div>
+
+        <div class="scenes-rotate" id="scenes-rotate">
+            <div class="rotate-label">
+                <span>Rotate your device to continue<br /> experiencing Toyota GR Supra</span>
+            </div>
+        </div>
+
+    </div>
+
+	<script src="js/libs/TweenMax.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

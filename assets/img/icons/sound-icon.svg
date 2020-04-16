@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="32" cy="32" r="31.5" stroke="#F5F5F5"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="9" y="11" width="43" height="42">
+<circle cx="30.7873" cy="32" r="6.42965" transform="rotate(-45 30.7873 32)" stroke="#F5F5F5"/>
+<circle cx="30.7877" cy="32" r="10.3894" transform="rotate(-45 30.7877 32)" stroke="#F5F5F5"/>
+<circle cx="30.7871" cy="32" r="14.3492" transform="rotate(-45 30.7871 32)" stroke="#F5F5F5"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="32.7676" y="32.1406" width="19.799" height="19.799" transform="rotate(-45 32.7676 32.1406)" fill="#F5F5F5"/>
+</g>
+<mask id="path-6-inside-1" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24.6667 37H20V27H24.6667L33 22V42L24.6667 37Z"/>
+</mask>
+<path d="M24.6667 37L25.1812 36.1425L24.9437 36H24.6667V37ZM20 37H19V38H20V37ZM20 27V26H19V27H20ZM24.6667 27V28H24.9437L25.1812 27.8575L24.6667 27ZM33 22H34V20.2338L32.4855 21.1425L33 22ZM33 42L32.4855 42.8575L34 43.7662V42H33ZM24.6667 36H20V38H24.6667V36ZM21 37V27H19V37H21ZM20 28H24.6667V26H20V28ZM25.1812 27.8575L33.5145 22.8575L32.4855 21.1425L24.1522 26.1425L25.1812 27.8575ZM32 22V42H34V22H32ZM33.5145 41.1425L25.1812 36.1425L24.1522 37.8575L32.4855 42.8575L33.5145 41.1425Z" fill="#F5F5F5" mask="url(#path-6-inside-1)"/>
+</svg>

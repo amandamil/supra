@@ -1,0 +1,833 @@
+#start-overlay
+    display: none
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 9
+    top: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.9)
+
+    &.overlay-active
+        display: block
+
+.intro-wrapper
+
+    &.intro-hidden
+
+        .scenes-wrapper, .video-wrapper.video-scenes, .scenes-rotate
+            visibility: hidden
+            opacity: 0
+
+        .scenes-placeholder, .video-wrapper.video-placeholder
+            visibility: visible
+            opacity: 1
+
+
+    .intro-label, .intro-heading, .intro-text, .intro-button, .sound-btn, .anim-item
+        opacity: 0
+        margin: 0
+        padding: 0
+
+    .scenes-wrapper
+        display: block
+        box-sizing: border-box
+        position: relative
+        overflow: hidden
+        width: 100%
+        height: 100%
+        z-index: 5
+        transition: 0s
+        visibility: visible
+        opacity: 1
+
+        @media (orientation: landscape), (min-height: 280px)
+            padding-right: 24px
+
+        &.intro-hidden
+            display: none
+
+    .scene-wrapper
+        z-index: 2
+        position: absolute
+
+        .intro-heading, .intro-text, .intro-label, p, h1
+            color: $white
+            -webkit-font-smoothing: antialiased
+
+        .intro-label, h1, .intro-heading
+            text-transform: uppercase
+
+        &.is-selected
+            z-index: 5
+
+    .scenes-rotate
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background: #000 url(../img/icons/bg-landscape.svg) 50% 50% no-repeat
+        background-size: cover
+        position: absolute
+        overflow: hidden
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        transition: 0s
+        visibility: hidden
+        opacity: 0
+        z-index: 7
+
+        @media (orientation: landscape) and (max-width: 1024px)
+            visibility: visible
+            opacity: 1
+
+    .rotate-links
+        display: flex
+        justify-content: space-between
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        padding: 12px 24px
+        background: linear-gradient(to bottom, #000, transparent)
+        z-index: 2
+
+    .rotate-link
+        display: block
+        font-family: $TTReg
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 0.12em
+        text-transform: uppercase
+        color: #ffffff
+
+        &:hover
+            color: #EB0A1E
+
+    .rotate-label
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        z-index: 1
+
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            left: -100px
+            top: -100px
+            right: -100px
+            bottom: -100px
+            background: radial-gradient(#000 0%, #000 25%, transparent)
+            z-index: 1
+
+        &:before
+            content: ''
+            display: block
+            position: relative
+            width: 42px
+            height: 40px
+            background: url(../img/icons/icon-rotate.svg) 0 0 no-repeat
+            background-size: contain
+            margin-bottom: 36px
+            z-index: 2
+
+        span
+            display: block
+            position: relative
+            z-index: 3
+            text-align: center
+            font-family: $TTReg
+            font-size: 14px
+            font-weight: 400
+            color: #ffffff
+            line-height: 20px
+
+    .scenes-placeholder
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        box-sizing: border-box
+        padding: 32px 16px
+        z-index: 2
+        visibility: hidden
+        opacity: 0
+
+        &.placeholder-hidden
+
+            .placeholder-heading
+                opacity: 0
+
+            .intro-button
+                opacity: 0
+
+
+    .placeholder-heading
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        font-family: $TTSemibold
+        color: #ffffff
+        text-align: center
+        font-size: 22px
+        line-height: 28px
+        letter-spacing: 0.25em
+        text-transform: uppercase
+        flex-grow: 1
+        opacity: 1
+        width: 100%
+        transition: 1s
+
+        +medium
+            display: block
+            flex-grow: 0
+            font-size: 36px
+            line-height: 48px
+            letter-spacing: 0.18em
+            margin-bottom: 42px
+
+            br
+                display: none
+
+    .placeholder-buttons
+        display: flex
+        position: relative
+        justify-content: center
+        align-items: center
+        flex-grow: 0
+        margin: 0 -8px
+        padding-top: 40px
+        width: calc(100% + 16px)
+        transition: 0s
+        opacity: 1
+        top: calc(5 * (1vw + 1vh - 1vmin))
+
+        +medium
+            margin: 0 -12px
+            width: calc(100% + 24px)
+
+        .intro-button
+            opacity: 1
+
+    .template-b
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        padding-top: 28px
+
+        +medium
+            padding-top: 56px
+
+        .intro-label
+            display: block
+            padding-left: 0
+            font-family: $TTReg
+            font-size: 12px
+            line-height: 1
+            letter-spacing: 0.12em
+            margin-bottom: 18px
+
+
+    .template-b, .template-c
+        word-wrap: break-word
+
+        .intro-heading
+            font-family: $TTSemibold
+            font-size: 22px
+            line-height: 28px
+            letter-spacing: 0.18em
+            margin-bottom: 17px
+
+            +medium
+                font-size: 26px
+                line-height: 34px
+                margin-bottom: 22px
+
+        .intro-text
+            font-family: $TTBook
+            font-size: 14px
+            line-height: 24px
+
+            +medium
+                line-height: 20px
+
+
+    .template-c
+        top: 0
+        left: 0
+        right: 0
+        padding-top: 22px
+
+        +mlarge
+            padding-top: 0
+            top: 50%
+            transform: translateY(-50%)
+            margin-top: -22px
+
+    .template-d
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        height: 100%
+
+        .intro-row, .intro-col-4
+            height: 100%
+
+        .wrapper-d
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            padding-top: 16px
+            height: 100%
+            box-sizing: border-box
+
+            +medium
+                justify-content: flex-start
+                padding-top: 24px
+
+        +medium
+            top: 50%
+            bottom: auto
+            transform: translateY(-50%)
+
+        .main-block
+
+            +medium
+                margin-bottom: 60px
+                margin-left: 0
+
+            span
+                font-family: $TTLight
+                font-size: 61px
+                line-height: 68px
+                letter-spacing: 0.08em
+                color: $white
+                -webkit-font-smoothing: antialiased
+
+                +medium
+                    font-size: 88px
+                    line-height: 1
+
+            p
+                font-family: $TTReg
+                font-size: 14px
+                line-height: 1
+                letter-spacing: 0.12em
+                text-transform: uppercase
+
+                +medium
+                    font-size: 18px
+                    line-height: 1
+                    letter-spacing: 0.19em
+
+
+            .text-flex-wrap
+                p
+                    align-self: flex-end
+                    font-family: $TTReg
+                    font-size: 30px
+                    line-height: 38px
+                    letter-spacing: 0.05em
+                    text-transform: none
+
+                    +medium
+                        font-size: 36px
+                        line-height: 64px
+                        letter-spacing: 1.5px
+                        margin: 0
+
+            .divider
+                flex-shrink: 0
+                flex-grow: 0
+                width: 1px
+                height: 68px
+                background-color: $divider-color
+                transform: rotate(25deg) translateY(7px)
+                margin:
+                    right: 17px
+                    left: 23px
+
+                +medium
+                    width: 2px
+                    height: 112px
+                    margin:
+                        right: 24px
+                        left: 24px
+                    transform: rotate(25deg) translateY(15px)
+
+        .value-wrap
+            display: flex
+            justify-content: flex-start
+            align-items: flex-end
+            margin-bottom: 8px
+
+            p
+                font-family: $TTBook
+                font-size: 31px
+                line-height: 1
+                letter-spacing: 0.08em
+                margin-right: 4px
+                margin-bottom: 0
+
+                +medium
+                    margin-right: 2px
+                    font-size: 36px
+
+            span
+                font-family: $TTReg
+                font-size: 18px
+                letter-spacing: 0.1em
+                line-height: 1
+                color: $white
+                -webkit-font-smoothing: antialiased
+
+                +medium
+                    font-size: 20px
+                    letter-spacing: 1.5px
+
+        p
+            font-family: $TTReg
+            font-size: 10px
+            line-height: 18px
+            letter-spacing: 0.14em
+            text-transform: uppercase
+
+            +medium
+                letter-spacing: 2px
+
+        @media (orientation: landscape) and (max-device-width: 768px), (max-height: 640px) and (min-width: 768px)
+
+            .hozir-divider
+                display: none
+
+            .aditional-block
+                display: flex
+                align-items: flex-start
+                margin: 0 -20px
+
+            .aditional-item
+                flex-grow: 1
+                flex-basis: 0
+                padding: 0 20px
+
+    .is-selected
+
+        & + .intro-restart
+            transition-delay: 6.2s
+            transform: translateY(0)
+
+        .intro-button
+            opacity: 1
+            transition-delay: 6.1s
+
+            & + .intro-button
+                transition-delay: 6.3s
+
+        .intro-mask-1
+            transition-delay: 3.8s
+            transform: skew(-16deg) translateX(0)
+
+        .intro-mask-2
+            transition-delay: 4.2s
+            transform: skew(-16deg) translateX(0)
+
+    .intro-buttons
+        display: flex
+        margin: 34px -8px 0
+        width: calc(100% + 16px)
+
+        +medium
+            width: calc(100% + 24px)
+            margin: 46px -12px 0
+
+    .intro-button
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: calc(50% - 16px)
+        max-width: 160px
+        text-transform: uppercase
+        color: #ffffff
+        background-color: transparent
+        font-family: $TTReg
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px
+        text-decoration: none
+        text-align: center
+        box-sizing: border-box
+        height: 40px
+        margin: 0 8px
+        border-radius: 20px
+        cursor: pointer
+        border: 1px solid #ffffff
+        transform: matrix(1, 0, 0, 1, 0, 0)
+        white-space: nowrap
+        transition: 0.4s
+        opacity: 0
+
+        +small
+            max-width: none
+            width: 160px
+
+        +medium
+            margin: 0 12px
+
+        &:hover, &.button-highlighted
+            background-color: #ffffff
+            color: #000000
+
+        &.button-highlighted:hover
+            color: #ffffff
+            background-color: #000000
+
+        &.button-featured
+            background-color: #eb0a1e
+            border-color: transparent
+
+            &:hover
+                color: #ffffff
+                background-color: darken(#eb0a1e, 20%)
+
+    .intro-restart
+        position: absolute
+        box-sizing: border-box
+        right: 24px
+        bottom: 24px
+        z-index: 5
+        cursor: pointer        
+        width: 64px
+        height: 64px
+        background-size: cover
+        border-radius: 50%
+        background-color: #1A1A1A
+        display: flex
+        justify-content: center
+        align-items: center
+        transform: translateY(150%)
+        transition: 0s
+        transition-delay: 0s
+        opacity: 1
+
+        +medium
+            right: 32px
+            bottom: 32px
+
+        @media (max-width: 768px) and (orientation: portrait)
+            transform: translateY(0)
+
+        span
+            display: none
+            color: #ffffff
+            font-family: $TTReg
+            font-size: 12px
+            font-weight: 400
+            line-height: 14px
+            padding-right: 24px
+            white-space: nowrap
+
+        .intro-restart-icon
+            display: block
+            background: url('../img/icons/restart-icon.svg') no-repeat
+            width: 17px
+            height: 20px
+
+    .intro-restart.expand 
+        width: 180px
+        border-radius: 64px
+        transition-delay: 0s
+
+        span
+            display: block
+
+    .intro-restart.close
+        transition-delay: 0s
+
+    .intro-mask-1
+        display: block
+        position: absolute
+        left: -2000px
+        right: 68%
+        top: 0
+        bottom: 0
+        background-color: #000000
+        transform-origin: 100% 100%
+        transform: skew(-16deg) translateX(-2000px)
+        transition-delay: 0s
+        transition: 0s
+        z-index: 1
+
+        @media (orientation: portrait)
+            right: 100%
+
+    .intro-mask-2
+        display: block
+        position: absolute
+        width: 340px
+        top: 0
+        right: 68%
+        bottom: 0
+        margin-right: -42px
+        transform-origin: 100% 100%
+        transform: skew(-16deg) translateX(-2000px)
+        transition-delay: 0s
+        transition: 0s
+        z-index: 2
+
+        @media (orientation: portrait)
+            right: 100%
+
+        &:before
+            content: ''
+            display: block
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            height: 60%
+            background-color: rgba(#ffffff, 0.05)
+
+    .aditional-item
+        p
+            margin-bottom: 32px
+            text-transform: uppercase
+
+            +medium
+                margin-bottom: 28px
+
+
+    .text-flex-wrap
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 14px
+
+        +medium
+            margin-bottom: 12px
+
+
+    .hozir-divider
+        display: block
+        width: 21px
+        height: 1px
+        margin-bottom: 27px
+        background-color: $horiz-divider-color
+
+        +medium
+            display: block
+            width: 32px
+            height: 3px
+
+
+    .sound-btn
+        width: 64px
+        height: 64px
+        background: url('../img/icons/sound-icon.svg') no-repeat
+        background-size: cover
+        cursor: pointer
+        border-radius: 50%
+        margin: 24px 0 0
+        padding: 0
+        transition: 0s
+
+        &.sound-btn-active
+            background-image: url(../img/icons/sound-icon-active.svg)
+
+        +medium
+            margin-top: 82px
+
+
+#start-scene-text
+    .intro-heading
+        +xsmall-min
+            width: 330px
+        +medium
+            width: 480px
+    .intro-text
+        +xsmall-min
+            width: 305px
+        +xlarge-max
+            width: 440px
+
+#design-scene-text
+    .intro-heading
+        width: 280px
+        +xlarge-max
+            width: 540px
+    .intro-text
+        +xsmall-min
+            width: 320px
+        +xlarge-max
+            width: 500px
+
+#design-scene-text-shoot3-1
+    .intro-heading
+        +xsmall-min
+            width: 330px
+        +medium
+            width: 530px
+        +xlarge-max
+            width: 530px
+
+#design-scene-text-shoot3-2
+    .intro-heading
+        width: 290px
+        +medium
+            width: 340px
+        +xlarge-max
+            width: 340px
+
+    .intro-text
+        +xsmall-min
+            width: 340px
+
+#design-scene-text-shoot3-3
+    .intro-heading
+        width: 260px
+        +medium
+            width: 310px
+
+#design-scene-text-shoot3
+    .intro-heading
+        width: 180px
+        +xsmall
+            width: 200px
+        +medium
+            width: 260px
+        +xlarge-max
+            width: 540px
+    .intro-text
+        +xsmall-min
+            width: 320px
+        +xlarge-max
+            width: 470px
+
+#performance-scene-text-shoot4-1
+    .wrapper-d
+        justify-content: center
+    .main-block
+        margin-bottom: 34px
+
+#performance-scene-text
+    .intro-heading
+        width: 220px
+        +medium
+            width: 280px
+    .intro-text
+        +xsmall
+            width: 380px
+        +xlarge-max
+            width: 450px
+
+#engine-scene-text
+    .intro-heading
+        width: 230px
+        +medium
+            width: 320px
+        +xlarge-max
+            width: 450px
+    .intro-text
+        +xsmall-min
+            width: 290px
+        +xlarge-max
+            width: 380px
+
+#wheels-scene-text
+    .intro-heading
+        +xsmall-min
+            width: 330px
+        +medium
+            width: 390px
+    .intro-text
+        +xsmall
+            width: 380px
+
+#wheels-scene-text-shoot5-1
+    .intro-heading
+        width: 300px
+        +medium
+            width: 450px
+    .intro-text
+        +xsmall
+            width: 350px
+
+#wheels-scene-text-shoot5-3
+    .intro-heading
+        width: 260px
+        +medium
+            width: 340px
+        +xlarge-max
+            width: 340px
+    .intro-text
+        width: 220px
+        +xlarge-max
+            width: 200px
+
+#wheels-scene-text-shoot5-4
+    .intro-heading
+        +xsmall-min
+            width: 310px
+        +medium
+            width: 400px
+        +xlarge-max
+            width: 400px
+    .intro-text
+        +medium
+            width: 400px
+        +xlarge-max
+            width: 400px
+
+#interior-scene-text
+    .intro-heading
+        +xsmall-min
+            width: 320px
+        +medium
+            width: 400px
+        +xlarge-max
+            width: 400px
+    .intro-text
+        +xsmall
+            width: 360px
+        +xlarge-max
+            width: 510px
+
+#interior-scene-text-shoot6-1
+    .intro-heading
+        width: 320px
+        +medium
+            width: 400px
+    .intro-text
+        +xsmall
+            width: 370px
+
+#screen-scene-text
+    .intro-heading
+        +xsmall-min
+            width: 320px
+        +medium
+            width: 460px
+    .intro-text
+        +xsmall-min
+            width: 300px
+
+#racing-scene-text
+    .intro-heading
+        +xsmall-min
+            width: 300px
+        +medium
+            width: 380px
+    .intro-text
+        +xsmall-min
+            width: 330px
